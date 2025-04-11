@@ -82,7 +82,7 @@ class DiffVGPipeline(ModelState):
 
         # Set Loss
         if self.x_cfg.loss_type in ['lpips', 'l2+lpips']:
-            lpips_loss_fn = LPIPS(net=self.x_cfg.perceptual.lpips_net).to(self.device)
+            lpips_loss_fn = LPIPS(net=self.x_cfg.perceptual.lpips_net, model_path=self.x_cfg.model_path).to(self.device)
             perceptual_loss_fn = partial(lpips_loss_fn.forward, return_per_layer=False, normalize=False)
 
         with tqdm(initial=self.step, total=num_iter, disable=not self.accelerator.is_main_process) as pbar:

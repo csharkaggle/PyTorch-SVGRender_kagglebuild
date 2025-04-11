@@ -5,6 +5,7 @@
 # optional args
 target: ~ # target file
 prompt: ~ # textual prompt
+model_path: ~ # model directory
 neg_prompt: "nsfw, lowres, (bad), text, error, fewer, extra, missing, worst quality, jpeg artifacts, low quality, watermark, unfinished, displeasing, oldest, early, chromatic aberration, signature, extra digits, artistic error, username, scan" # negative prompt
 result_path: './workspace' # results output path
 

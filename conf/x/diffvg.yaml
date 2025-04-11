@@ -16,3 +16,9 @@ path_type: 'unclosed' # or 'closed', using Closed curve or non-closed curve
 
 # loss
 loss_type: 'l2' # or 'l1', 'l2', 'lpips', 'l2+lpips', loss type
+
+
+perceptual:
+  name: "lpips" # dists
+  lpips_net: 'vgg'
+  coeff: 0.2
