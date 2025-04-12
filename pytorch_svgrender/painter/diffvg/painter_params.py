@@ -163,6 +163,8 @@ class Painter(DiffVGState):
     def save_svg(self, fpath):
         pydiffvg.save_svg(f'{fpath}', self.canvas_width, self.canvas_height, self.shapes, self.shape_groups)
 
+    def to_svg(self):        
+        return pydiffvg.to_svg(self.canvas_width, self.canvas_height, self.shapes, self.shape_groups)
 
 class LinearDecayLR:
 
