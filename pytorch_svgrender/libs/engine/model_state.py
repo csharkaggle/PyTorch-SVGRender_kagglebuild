@@ -240,8 +240,8 @@ def dictconfig_diff(dict1, dict2):
     Find the difference between two OmegaConf.DictConfig objects
     """
     # Convert OmegaConf.DictConfig to regular dictionaries
-    dict1 = OmegaConf.to_container(dict1, resolve=True)
-    dict2 = OmegaConf.to_container(dict2, resolve=True)
+    dict1 = OmegaConf.to_container(dict1)
+    dict2 = OmegaConf.to_container(dict2)
 
     # Find the keys that are in dict1 but not in dict2
     diff = {}
