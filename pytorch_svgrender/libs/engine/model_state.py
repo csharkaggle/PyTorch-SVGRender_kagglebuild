@@ -36,8 +36,8 @@ class ModelState:
         self.args: DictConfig = args
 
         # runtime output directory
-        with open_dict(args):
-            args.output_dir = hydra.core.hydra_config.HydraConfig.get().runtime.output_dir
+        # with open_dict(args):
+        #     args.output_dir = hydra.core.hydra_config.HydraConfig.get().runtime.output_dir
 
         # set cfg
         self.state_cfg = args.state
