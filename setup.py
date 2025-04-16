@@ -3,50 +3,14 @@
 # Author: XiMing Xing
 
 from setuptools import setup, find_packages
+import os
 
 setup(
     name='pytorch_svgrender',
     version="0.1.0",
-    packages=find_packages(where="."),  # カレントディレクトリを指定
-    package_dir={"": "."},  # パッケージのルートディレクトリを指定
+    packages=[p for p in find_packages() if p.startswith('pytorch_svgrender')],
+    package_data={'pytorch_svgrender': ['py.typed']},
     install_requires=[
-        'hydra-core',
-        'omegaconf',
-        'freetype-py',
-        'shapely',
-        'svgutils',
-        'cairosvg',
-        'opencv-python',
-        'scikit-image',
-        'matplotlib',
-        'visdom',
-        'wandb',
-        'beautifulsoup4',
-        'triton',
-        'numba',
-        'numpy',
-        'scipy',
-        'scikit-fmm',
-        'einops',
-        'timm',
-        'fairscale==0.4.13',
-        'accelerate',
-        'transformers',
-        'safetensors',
-        'datasets',
-        'easydict',
-        'scikit-learn',
-        'pytorch_lightning==2.1.0',
-        'webdataset',
-        'ftfy',
-        'regex',
-        'tqdm',
-        'diffusers==0.32.2',
-        'svgwrite',
-        'svgpathtools',
-        'cssutils',
-        'torch-tools',
-        'git+https://github.com/openai/CLIP.git',
     ],
     python_requires=">=3.7",
     author='Ximing Xing, Juncheng Hu et al.',
