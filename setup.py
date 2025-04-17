@@ -2,13 +2,13 @@
 # Copyright (c) XiMing Xing. All rights reserved.
 # Author: XiMing Xing
 
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 
 setup(
     name='pytorch_svgrender',
     version="0.1.0",
-    packages=['pytorch_svgrender'],
+    packages=[p for p in find_packages() if p.startswith('pytorch_svgrender')],
     package_data={'pytorch_svgrender': ['py.typed']},
     install_requires=[
     ],
