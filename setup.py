@@ -16,7 +16,7 @@ setup(
     author='Ximing Xing, Juncheng Hu et al.',
     author_email='ximingxing@gmail.com',
     description='SVG Differentiable Rendering: Generating vector graphics using neural networks.',
-    long_description=open("README.md").read() if os.path.exists("README.md") else "",
+    long_description="",
     long_description_content_type="text/markdown",
     keywords=[
         'Artificial Intelligence',
